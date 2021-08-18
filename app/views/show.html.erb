@@ -1,0 +1,21 @@
+<h2><% list.movies.each do |movie| %></h2>
+
+<ul>
+    <%bookmark = Bookmark.find_by(@list, movie: movie)%>
+    <li>
+    <%movie.title%>
+
+    <%bookmark.comment%>
+    <%= link_to "delete bookmark", bookmark_path(bookmark), method: :delete %>>
+    </li>
+    <%end%>
+</ul>
+
+<% = simple_form_for @user do | f | %>
+  <% = f.input: comment %>
+  <% = f. asociación: movie %>
+  <% = f.association: review %>
+  <% = f. botón: enviar %>
+<% end %>
+
+<%=link_to("Volver", lists_path)%>
