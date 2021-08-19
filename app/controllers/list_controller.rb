@@ -31,3 +31,4 @@ class ListController < ApplicationController
     end
 
 end
+  
