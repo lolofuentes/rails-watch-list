@@ -1,4 +1,4 @@
-class ListController < ApplicationController
+class ListsController < ApplicationController
 
     def index
         @list = List.all    
@@ -13,7 +13,7 @@ class ListController < ApplicationController
     end
 
     def create
-        @list = List.new(list_params)
+        @list = List.new(lists_params)
         @list.save
         redirect_to list_path(@list)
     end

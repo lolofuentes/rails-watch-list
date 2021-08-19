@@ -1,0 +1,11 @@
+<ul >
+
+  <% @list.each do |list| %>
+    <li><%= link_to(list.name, list_path(list)) %>
+    </li>
+  <% end %>
+</ul> 
+
+  <%= link_to("crear una nueva lista", new_list_path)%>
+
+
