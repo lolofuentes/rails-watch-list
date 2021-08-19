@@ -1,0 +1,12 @@
+<h1>Bienvenidos a Best Video</h1>
+<p>Disfruta de series Originales y exclusivas. Disfruta ahora desde la comodidad de tu hogar</p>
+
+<ul>
+    <%@bookmarks.each do |list|%>
+    <li>
+    <%= movie.title%>
+    <%= list.comment%>
+    <%= bookmark.comment%>
+    </li>
+    <%end%>
+</ul>
