@@ -9,12 +9,18 @@ class ListController < ApplicationController
     end
 
     def create
-        @list = List.new (list_params)
+        @list = List.new(list_params)
         @list.save
+        redirect_to list_path(@list)
     end
 
     def show
-        @list = List.find (params[:id])
+        @list = List.find(params[:id])
+        @bookmark = Bookmarks.new
+    end
+
+    def Bookmarks
+        @list = List.find(params[:id])
         @list.bookmarks
     end
 

@@ -13,9 +13,9 @@
 
 <% = simple_form_for @user do | f | %>
   <% = f.input: comment %>
-  <% = f. asociación: movie %>
+  <% = f.asociación: movie %>
   <% = f.association: review %>
-  <% = f. botón: enviar %>
+  <% = f.submit: "review", class: "btn-yours" %>
 <% end %>
 
 <%=link_to("Volver", lists_path)%>
