@@ -13,9 +13,9 @@ class ListsController < ApplicationController
     end
 
     def create
-        @list = List.new(lists_params)
+        @list = List.new(list_params)
         @list.save
-        redirect_to list_path(@list)
+        redirect_to lists_path(@list)
     end
 
     def Bookmarks

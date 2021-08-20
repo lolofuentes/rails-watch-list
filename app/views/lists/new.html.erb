@@ -1,4 +1,14 @@
-<%= simple_form_for (@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+<div class= "navbar" >
+<a>Revisa más títulos</a>
+</div>
+<div class= "container">
+  <%= simple_form_for (@list) do |f| %>
+  <p><strong><%= f.input :name %></strong></p>
+  <ul>
+    <li></li>
+
+  
+  <p><%= f.button :submit, class: "btn btn-primary" %>
+    <%=link_to("Volver", lists_path)%></p>
 <% end %>
+</div>

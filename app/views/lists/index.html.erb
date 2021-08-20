@@ -1,11 +1,33 @@
-<ul >
+<div class= " banner">
+  <h1>Tus Películas</h1>
 
-  <% @list.each do |list| %>
-    <li><%= link_to(list.name, list_path(list)) %>
-    </li>
-  <% end %>
-</ul> 
+  <div class= "card">
+  <ul>
+    <% @list.each do |list| %>
+      <li><%= link_to(list.name, list_path(list)) %>
+      </li>
+    <% end %>
+  </ul> 
+  </div>
 
   <%= link_to("crear una nueva lista", new_list_path)%>
 
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+      <h5 class="card-title">Los Puentes de Madison</h5>
+      <p class="card-text">En el condado de Madison, Francesca es una ama de casa recibe la visita de Robert, un fotógrafo de National Geographic.</p>
+      </div>
 
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Dirigida por Clint Eastwood</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    
+    <div class="card-body">
+      <a href="#" class="card-link">Comentarios</a>
+      <a href="#" class="card-link">sinopsis</a>
+    </div>
+
+</div>
