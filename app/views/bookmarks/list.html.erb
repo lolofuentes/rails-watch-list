@@ -1,12 +1,12 @@
 <div class= "navbar" >
 <a>Revisa más títulos</a>
-</div>
-<h2><% list.movies.each do |movie| %></h2>
+</div><h2><% list.movies.each do |movie| %></h2>
 
 <ul>
+
   <%   @lists.each do |list| %>
-    <li>
-    <%= list.name %>
+    <li><%= list.name %>
+     <%= link_to "delete bookmark", bookmark_path(bookmark), method: :delete %>
     </li>
   <% end %>
 </ul> 

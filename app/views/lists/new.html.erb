@@ -5,10 +5,11 @@
   <%= simple_form_for (@list) do |f| %>
   <h5><strong><%= f.input :name%></strong></h5>
   <ul>
-    <li>resultado busqueda</li>
+    <li>resultado</li>
 
   
   <p><%= f.button :submit, class: "btn btn-primary" %>
-    <%=link_to("Volver", lists_path)%></p>
+      
+    <%= link_to("Volver", lists_path)%></p>
 <% end %>
 </div>
