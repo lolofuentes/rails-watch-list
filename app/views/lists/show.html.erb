@@ -3,12 +3,11 @@
 
 <ul>
     <% @list.movies.each do |movie| %>
-   
+
     <li>
     <%= movie.title%>
     <br/>
-
-    <%= movie.bookmarks.first.comment%>
+    <%= movie.bookmarks.last.comment%>
     <%= link_to "delete bookmark", bookmark_path(movie.bookmarks.first), method: :delete %>
     </li>
     <% end%>
@@ -21,6 +20,9 @@
 <%= f.input :comment %>
 <%= f.association :movie %>
 <%= f.submit "submit" %>
+<%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
 <%end%>
+
 </div>
 </div>
