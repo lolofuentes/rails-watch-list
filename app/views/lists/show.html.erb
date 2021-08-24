@@ -6,6 +6,7 @@
 
     <li>
     <%= movie.title%>
+    
     <br/>
     <%= movie.bookmarks.last.comment%>
     <%= link_to "delete bookmark", bookmark_path(movie.bookmarks.first), method: :delete %>
@@ -19,8 +20,9 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
 <%= f.input :comment %>
 <%= f.association :movie %>
-<%= f.submit "submit" %>
-<%= f.input :photos, as: :file, input_html: { multiple: true } %>
+<%= f.input :photo, as: :file %>
+<%= f.submit "comentar", class: "btn btn-primary" %>
+
 
 <%end%>
 

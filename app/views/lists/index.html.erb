@@ -7,15 +7,20 @@ ACÁ NAVBAR
   <div class= "card">
   <ul>
     <% @list.each do |list| %>
-      <li><%= link_to(list.name, list_path(list))%>
+      <li>
+      <%= link_to(list.name, list_path(list))%>
+      
       </li>
     <% end %>
   </ul> 
   </div>
 
   <div>
-  <%= link_to "crear una nueva lista", new_list_path, class: "btn btn-primary" %>
+  <%= link_to "crear categoría", new_list_path, class: "btn btn-primary" %>
   </div>
+  <h2>Lo más comentado</h2>
+
+  
 
     <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
